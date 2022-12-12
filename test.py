@@ -1,9 +1,8 @@
-def seperate(n):
-    sum = 0
-    while n>0:
-        for i in range(n):
-            print(n)
-            sum += n
-            n -= 1
-    print(sum)
-    return seperate(1023)
+number = 1023
+sum = 0
+num_list= list(map(int,str(number)))
+# print(num_list) # 자리수 분리하여 출력
+for i in num_list:
+    print(i)
+    sum +=i
+print(sum)

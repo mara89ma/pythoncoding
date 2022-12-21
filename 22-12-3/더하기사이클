@@ -1,23 +1,13 @@
-number = 26
-sum = 0
-num_list= []
-count = 0
+n = 26 #입력받는 변수
+num = n # num은 바뀌어서 계싼해야되서 변수로 둠
+cnt = 0 # cnt는 몇번 반복했는지 나타내는 변수
 while True:
-    last_digit = number%10 # 10으로 나눈 수
-    num_list.insert(0,last_digit) # 마지막 수를 넣기
-    number = number // 10 # number는 몫
-    if number == 0: # number 가 0이되면 멈추기
-        break
-while True:
-    for i in num_list:
-        # print(i) # 분리한 수들을 하나씩 출력
-        sum += i # 합구하기
-    sum = sum%10
-    # print(sum)
-    if number == sum:
-        break
-    count += 1
+    a = num//10 # a는 num의 첫번째 수
+    b = num%10 # b는 num의 두번째 수
+    c = (a+b)%10 # c는 a와 b를 더한 값의 두번째 수
+    num = (b*10)+c #num은 나머지 수가 0.x니까 10을 곱하고 c를 더함
 
-# print(num_list)
-# print(sum)
-print(count)
+    cnt = cnt+1 # 반복 횟수를 위해서 더함
+    if(num == n): # num의 값이 맨처음에 입력받은 변수와 같다면 멈추기
+        break
+print(cnt)

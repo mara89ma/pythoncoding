@@ -1,1 +1,31 @@
+word = "W"
+count = 0
+time = 0
+three = ["A","B","C"]
 
+
+if word in {"A","B","C"}:
+    time = 3
+    count += time
+elif word in {"D","E","F"}:
+    time = 4
+    count += time
+elif word in {"G", "H", "I"}:
+    time = 5
+    count += time
+elif word in {"J", "K", "L"}:
+    time = 6
+    count += time
+elif word in {"M", "N", "O"}:
+    time = 7
+    count += time
+elif word in {"P", "Q", "R","S"}:
+    time = 8
+    count += time
+elif word in {"T", "V", "U"}:
+    time = 9
+    count += time
+elif word in {"W", "X", "Y","Z"}:
+    time = 10
+    count += time
+print(count)

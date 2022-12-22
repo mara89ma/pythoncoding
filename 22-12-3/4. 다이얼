@@ -1,31 +1,8 @@
-w = "WUNUCIC"
-word_list = list(w)
-print(word_list)
-count = 0
-time = 0
-for word in word_list:
-    if word in {"A","B","C"}:
-        time = 3
-        count += time
-    elif word in {"D","E","F"}:
-        time = 4
-        count += time
-    elif word in {"G", "H", "I"}:
-        time = 5
-        count += time
-    elif word in {"J", "K", "L"}:
-        time = 6
-        count += time
-    elif word in {"M", "N", "O"}:
-        time = 7
-        count += time
-    elif word in {"P", "Q", "R","S"}:
-        time = 8
-        count += time
-    elif word in {"T", "V", "U"}:
-        time = 9
-        count += time
-    elif word in {"W", "X", "Y","Z"}:
-        time = 10
-        count += time
-print(count)
+dial = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
+a = input()
+ret = 0
+for j in range(len(a)): # a의 길이만큼 반복하여 j 에 넣어서 하나씩 비교
+    for i in dial:
+        if a[j] in i: #위에 있는  dial 에 맞는 결과값이 있으면 출력력
+           ret += dial.index(i)+3
+print(ret)

@@ -1,0 +1,8 @@
+class Array:
+    def get(self, idx): #self -> 자기 자신을 참조하는 매개변수, idx는 인덱스 값을 읽어오기
+        self.idx = idx # array는 특정 임의의 값을 읽어오는 기능을 가지며, 한번에 바로 조회가능
+        pass
+    def set(self, idx, value): # 값을 수정하기
+        pass
+    def __init__(self, size):
+        pass

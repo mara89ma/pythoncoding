@@ -1,28 +1,54 @@
+def add(self, value):
+    new_node = Node(value)
+    if self.head is None:
+        self.head = new_node
+        self.tail = new_node
+        self.current = new_node
+    else:
+        self.tail.next_node = new_node
+        self.tail = new_node
+        
+class Node:
+def init(self, value=None, next_node=None):
+self.value = value
+self.next_node = next_node
+
 class LinkedList:
-    def move_next(self):  # 다음 값으로 이동하기, 포인터의 노드에 다음 노드의 주소값이 잇음
-        return self.pointer
-        pass
-    def get(self): #  값을 구하기
-        return self.value #  해당값의 원래 값
-        pass
-    def add(self, value): # 값을 추가하기
-        self.pointer = self.value
-        return self.value
-        pass
-    def delete(self): # 값 삭제하면 포인터가 삭제됨
-        self.pointer = None
+def init(self):
+self.head = None
+self.tail = None
+self.current = None
+def delete(self):
+    if self.head is None:
         return None
-        pass
-    def move_front(self): # 맨처음으로 이동
-        if self.length == 0:
-            return None
-        return self
-        pass
-    def __init__(self,value=None,pointer=None): # 리스트는 값과 포인터를 가짐
-        self.value = value
-        self.pointer = pointer
-        pass
-
-
-List2 = [5,4,3,2,1]
-LinkedList.get(Link)
+    if self.head == self.tail:
+        value = self.head.value
+        self.head = None
+        self.tail = None
+        self.current = None
+        return value
+    if self.current == self.head:
+        value = self.head.value
+        self.head = self.head.next_node
+        self.current = self.head
+        return value
+    else:
+        previous = self.head
+        while previous.next_node != self.current:
+            previous = previous.next_node
+        value = self.current.value
+        previous.next_node = self.current.next_node
+        if self.current == self.tail:
+            self.tail = previous
+        self.current = self.current.next_node
+        return value
+def get(self):
+    if self.current:
+        return self.current.value
+    else:
+        return None
+def move_next(self):
+    if self.current:
+        self.current = self.current.next_node
+def move_front(self):
+    self.current = self.head

@@ -1,13 +1,3 @@
-def add(self, value):
-    new_node = Node(value)
-    if self.head is None:
-        self.head = new_node
-        self.tail = new_node
-        self.current = new_node
-    else:
-        self.tail.next_node = new_node
-        self.tail = new_node
-        
 class Node:
 def init(self, value=None, next_node=None):
 self.value = value
@@ -18,6 +8,17 @@ def init(self):
 self.head = None
 self.tail = None
 self.current = None
+
+def add(self, value):
+    new_node = Node(value)
+    if self.head is None:
+        self.head = new_node
+        self.tail = new_node
+        self.current = new_node
+    else:
+        self.tail.next_node = new_node
+        self.tail = new_node
+        
 def delete(self):
     if self.head is None:
         return None

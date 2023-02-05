@@ -1,0 +1,16 @@
+number = 100000000
+num_list = []
+sum = 0
+
+while True : # 무한루프,
+    last_digit = number % 10
+    num_list.insert(0,last_digit)
+    number = number//10
+    if number == 0 :
+        break
+
+for i in num_list:
+    print(i)
+    sum += i
+
+print(sum)

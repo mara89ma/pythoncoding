@@ -1,0 +1,8 @@
+class Warehouse:
+    purpose = 'storage'
+    region = 'west'
+w1 = Warehouse() # 인스턴
+print(w1.purpose, w1.region)
+w2 = Warehouse()
+w2.region = 'east' # 어트리뷰트
+print(w2.purpose, w2.region)

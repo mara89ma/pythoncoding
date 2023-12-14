@@ -1,0 +1,20 @@
+class LinkedList:
+    class Node:
+        def __init__(self,prev, next, value): # 노드에 전, 다음 , 그리고 현재값을 추가
+            self.prev = prev
+            self.next = next
+            self.vaule = value
+
+    def move_next : #다음 값으로 이동
+            self.current = self.current.next # 현재값의 다음 값으로 이동 
+    def move_k : # k 번째 값으로 이동
+        sum = 0
+        for i in range (k): # k 만큼 반복
+            sum += 1 #sum 에 1씩 추가 k가 3이면, 3번째까지 이동후, 
+        self.current = self.current.next 
+        if sum == k: #sum값과 k 값이 같으면 
+            return # 값 리턴
+    def __init__(self,data): # 초기값
+        self.head = LinkedList.Node(None,None,None)
+        self.current = self.head
+        self.tail = self.head # 마지막 값이 다시 처음 노드 값

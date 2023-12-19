@@ -18,12 +18,12 @@ for file in files : #문자열 하나 요소 반복
         if file[i].isdigit():#i 값이 문자열이라면?
             head = file[:i]#head 리스트에 값 넣기
             number = file[i:]
-            for j in range(len(number)): # number의 길이만큼 반복 하나씪 j에 넣기
+            for j in range(len(number)): # number의 길이만큼 반복, 하나씪 j에 넣기
                 if number[j].isalpha(): # j의 값이 문자열이라면?
                     tail = number[j:] #마지막값은 NUMBER의 숫자 다음
                     number = number[:j]#number값은 숫자가나올때까지만 출력
-                    break #숫자 찾으면 문자 종료
-            break
+                    break #문자 찾으면 문자 종료
+            break # 숫자 찾으면 종료
                 #if sp_number[j].isdigit(): #number[j] 가 숫자라면
                     #number = sp_number#
                     #tail = number[:j]
